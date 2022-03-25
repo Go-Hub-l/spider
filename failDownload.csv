@@ -9,3 +9,27 @@ PMID,title,Year,doi
 32759081,A Row-Column (RC) Addressed 2-D Capacitive Micromachined Ultrasonic Transducer (CMUT) Array on a Glass Substrate,2021,10.1109/TUFFC.2020.3014780
 34577770,Investigation on Design Theory and Performance Analysis of Vacuum Capacitive Micromachined Ultrasonic Transducer,2021,10.3390/mi12091127
 34442585,Breast Acoustic Parameter Reconstruction Method Based on Capacitive Micromachined Ultrasonic Transducer Array,2021,10.3390/mi12080963
+33435307,Encapsulation of Capacitive Micromachined Ultrasonic Transducers (CMUTs) for the Acoustic Communication between Medical Implants,2021,10.3390/s21020421
+33761341,Broad bandwidth air-coupled micromachined ultrasonic transducers for gas sensing,2021,10.1016/j.ultras.2021.106410
+33905329,Design and Fabrication of Wideband Air-Coupled Capacitive Micromachined Ultrasonic Transducers With Varying Width Annular-Ring and Spiral Cell Structures,2021,10.1109/TUFFC.2021.3076143
+33625982,Dual-Frequency CMUT Arrays for Multiband Ultrasound Imaging Applications,2021,10.1109/TUFFC.2021.3062071
+34064449,Wafer-Bonding Fabricated CMUT Device with Parylene Coating,2021,10.3390/mi12050516
+34398764,A Wearable Ultrasonic Neurostimulator-Part II: A 2D CMUT Phased Array System With a Flip-Chip Bonded ASIC,2021,10.1109/TBCAS.2021.3105064
+33983883,Analysis of Negative Capacitance-Based Broadband Impedance Matching for CMUTs,2021,10.1109/TUFFC.2021.3079720
+33669794,An Investigation of Silica Aerogel to Reduce Acoustic Crosstalk in CMUT Arrays,2021,10.3390/s21041459
+34683231,Hybrid Cell Structure for Wideband CMUT: Design Method and Characteristic Analysis,2021,10.3390/mi12101180
+34314360,A Wearable Ultrasonic Neurostimulator - Part I: A 1D CMUT Phased Array System for Chronic Implantation in Small Animals,2021,10.1109/TBCAS.2021.3100458
+33799399,CMUT-Based Sensor for Acoustic Emission Application: Experimental and Theoretical Contributions to Sensitivity Optimization,2021,10.3390/s21062042
+33175678,Closed-Form Expressions on CMUTs With Layered Anisotropic Microplates Under Residual Stress and Pressure,2021,10.1109/TUFFC.2020.3037320
+34832751,Research on Novel CMUTs for Detecting Micro-Pressure with Ultra-High Sensitivity and Linearity,2021,10.3390/mi12111340
+34910638,An RX AFE With Programmable BP Filter and Digitization for Ultrasound Harmonic Imaging,2021,10.1109/TBCAS.2021.3135859
+32403843,Transparent capacitive micromachined ultrasonic transducer (CMUT) arrays for real-time photoacoustic applications,2020,10.1364/OE.390612
+32058496,Sparse hand-held probe for optoacoustic ultrasound volumetric imaging: an experimental proof-of-concept study,2020,10.1364/OL.384002
+31052849,Transparent capacitive micromachined ultrasonic transducers (CMUTs) for photoacoustic applications,2019,10.1364/OE.27.013204
+28113931,"""Bilateral CMUT Cells and Arrays: Equivalent Circuits", Diffraction Constants," and Substrate Impedance"""
+26737263,"""A low power"," area efficient fpga based beamforming technique for 1-D CMUT arrays""",2015
+16463491,"""Design"," fabrication and characterization of a capacitive micromachined ultrasonic probe for medical imaging""",2005
+16463484,CMUT array modeling through free acoustic CMUT modes and analysis of the fluid CMUT interface through Fourier transform methods,2005,16463484
+15244289,Directional scholte wave generation and detection using interdigital capacitive micromachined ultrasonic transducers,2004,15244289
+15133949,A model study of capacitive micromachined ultrasonic transducers fabricated using atomic layer deposition process,2004,15133949
+11800110,"""Novel", wide bandwidth," micromachined ultrasonic transducers"""
