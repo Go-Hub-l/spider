@@ -26,6 +26,19 @@ failCount = 0
 successCount = 0
 
 
+def filter_illegal_character(title):
+    title = title.replace('\\', '-')
+    title = title.replace('/', '-')
+    match_TITLE[0] = match_TITLE[0].replace(',', '-')
+    match_TITLE[0] = match_TITLE[0].replace('"', '')
+    match_TITLE[0] = match_TITLE[0].replace(':', '-')
+    match_TITLE[0] = match_TITLE[0].replace('.', '-')
+    match_TITLE[0] = match_TITLE[0].replace('*', '')
+    match_TITLE[0] = match_TITLE[0].replace('<', '-')
+    match_TITLE[0] = match_TITLE[0].replace('>', '-')
+    match_TITLE[0] = match_TITLE[0].replace('|', '-')
+
+
 def extractDoiPmidTitleYear(filename_in):
     """提取文件中的PMID,TITLE,YEAR,DOI"""
 
@@ -62,6 +75,13 @@ def extractDoiPmidTitleYear(filename_in):
         match_TITLE[0] = match_TITLE[0].replace('\\', '-')
         match_TITLE[0] = match_TITLE[0].replace('/', '-')
         match_TITLE[0] = match_TITLE[0].replace(',', '-')
+        match_TITLE[0] = match_TITLE[0].replace('"', '')
+        match_TITLE[0] = match_TITLE[0].replace(':', '-')
+        match_TITLE[0] = match_TITLE[0].replace('.', '-')
+        match_TITLE[0] = match_TITLE[0].replace('*', '')
+        match_TITLE[0] = match_TITLE[0].replace('<', '-')
+        match_TITLE[0] = match_TITLE[0].replace('>', '-')
+        match_TITLE[0] = match_TITLE[0].replace('|', '-')
         if line:
             PMID_LIST.append(match_PMID[0])
             TITLE_LIST.append(match_TITLE[0])
