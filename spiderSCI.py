@@ -19,8 +19,6 @@ def get_fake_User_Agent():
     return user_anget
 
 # 爬虫类
-
-
 class spider(object):
     def __init__(self, path, csv_file, try_count) -> None:
         self._pmid_list = []            # 文献的PMID
@@ -46,11 +44,8 @@ class spider(object):
     def inin_table_head(self, columns=['PMID', 'title', 'Year', 'doi']):
         """初始化表头"""
         self._paper_data = DataFrame(columns=columns)
-    # def table_head(self, columns):
-    #     self._paper_data = DataFrame(columns=['PMID', 'title', 'Year', 'doi'])
-
-    # 下载失败文献的表头
-    # paper_data = DataFrame(columns=['PMID', 'title', 'Year', 'doi'])
+        
+    # 过滤非法字符
     def filter_illegal_character(self, title):
         title = title.replace('"', '')
 
@@ -117,9 +112,6 @@ class spider(object):
             self._year_list[articleIndex]
         file = self._path + ArticleMessage + ".pdf"
         head = {
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
-        }
-        head = {
             'user-agent': get_fake_User_Agent()
         }
 
@@ -128,13 +120,13 @@ class spider(object):
                 r = requests.get(url, headers=head)
                 r.raise_for_status()
                 r.encoding = r.apparent_encoding
+                soup = BeautifulSoup(r.text, "html.parser")
             except Exception as e:
                 print('Download article: %s' % e)
                 self._fail_count += 1
-                print('The %d article failed, total failed article: %d !!!' %
+                print('The index %d article failed, total failed article: %d !!!' %
                       (articleIndex, self._fail_count))
                 return
-            soup = BeautifulSoup(r.text, "html.parser")
             # 如何SCI-HUB未收录：查看源代码发现如果出现div标签的属性为about,则说明未收录
             paper_list = soup.find_all('div', attrs={'id': 'about'})
             if paper_list:
@@ -147,7 +139,7 @@ class spider(object):
                 # 当前文献下载失败，输出失败的文献名
                 error_message = ArticleMessage + 'is download failed!!!'
                 print(error_message)
-                print('The %d article failed, total failed article: %d !!!' %
+                print('The index %d article failed, total failed article: %d !!!' %
                       (articleIndex, self._fail_count))
 
                 return
@@ -156,7 +148,8 @@ class spider(object):
             download_url = soup.iframe.attrs["src"]
             # 如果该处报错，重新启动程序下载即可
             try:
-                download_r = requests.get(download_url, headers=head)
+                download_r = requests.get(
+                    download_url, headers=head)
                 download_r.raise_for_status()
                 with open(file, "wb+") as temp:
                     temp.write(download_r.content)
@@ -216,7 +209,7 @@ class spider(object):
         # 记录下载文献开始时间
         start_time = time.time()
         # 下载文献
-        for num in range(61, literature_num):
+        for num in range(100, literature_num):
             url = "https://www.sci-hub.ren/doi:" + self._doi_list[num] + "#"
             res = self.Download(url, num)
 
@@ -240,7 +233,7 @@ class spider(object):
 
 
 def main(filename):
-    path = ".\\ppper\\"
+    path = ".\\Download\\"
     spider_sci = spider(path, filename, 3)
     # 初始化
     spider_sci.init_everythind()
@@ -248,4 +241,4 @@ def main(filename):
 
 
 if __name__ == '__main__':
-    main("Capacitive.csv")
+    main("Ultrasonic.csv")
